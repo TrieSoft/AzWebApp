@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="color:purple">Welcome to Azure Web App.</h1>
+    <p style="color:orange">Learn about building/deploying Web apps with ASP.NET Core on the Azure Web App.</p>
+    <p style="color:orange">Release 1.0</p>
+    <p style="color:green">You are accessing azure instance (VM) - @Environment.GetEnvironmentVariable("WEBSITE_INSTANCE_ID")</p>
+</div>
