@@ -2,8 +2,13 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.config
-/.vscode
-/bin
-/obj
-/Properties
+/.vs
+/AzAPIApp/bin
+/AzAPIApp/obj
+/AzAPIApp/Properties
+/AzWebApp/.config
+/AzWebApp/bin
+/AzWebApp/obj
+/AzWebApp/Properties
+/FunctionApp1/Properties
+/obj/Debug/net6.0
