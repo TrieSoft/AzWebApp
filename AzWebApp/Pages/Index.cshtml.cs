@@ -16,7 +16,7 @@ namespace AzWebApp.Pages
 
 		public void OnGet()
 		{
-			string kvUri = "";
+			string kvUri = "https://labkvstorage.vault.azure.net/";
 			SecretClient client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
 			var secret = client.GetSecretAsync("secretColour").Result.Value;
 			ViewData["secretColour"] = secret.Value;
