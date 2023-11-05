@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace AzWebApp.Pages
@@ -14,7 +16,10 @@ namespace AzWebApp.Pages
 
 		public void OnGet()
 		{
-
+			string kvUri = "";
+			SecretClient client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
+			var secret = client.GetSecretAsync("secretColour").Result.Value;
+			ViewData["secretColour"] = secret.Value;
 		}
 	}
 }
